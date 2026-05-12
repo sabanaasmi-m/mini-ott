@@ -11,7 +11,7 @@ import Dashboard from './pages/Dashboard';
 import Films from './pages/Films';
 import AddFilm from './pages/AddFilm';
 import EditFilm from './pages/EditFilm';
-import FilmApproval from './pages/Filmapproval';
+import FilmApproval from './pages/FilmApproval';
 import Categories from './pages/Categories';
 import Users from './pages/Users';
 import Analytics from './pages/Analytics';
