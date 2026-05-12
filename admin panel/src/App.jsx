@@ -13,7 +13,7 @@ import AddFilm from './pages/AddFilm';
 import EditFilm from './pages/EditFilm';
 import FilmApproval from './pages/FilmApproval';
 import Categories from './pages/Categories';
-import Users from './pages/Users';
+import Users from './pages/Users'
 import Analytics from './pages/Analytics';
 import Comments from './pages/Comments';
 import Settings from './pages/Settings';
