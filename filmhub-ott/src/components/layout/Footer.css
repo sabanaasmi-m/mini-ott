@@ -1,0 +1,87 @@
+.footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding-top: 60px;
+  margin-top: 80px;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+  display: grid;
+  grid-template-columns: 1.4fr 2fr;
+  gap: 60px;
+}
+
+.footer-logo {
+  display: flex; align-items: center;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+.footer-logo .logo-mark { font-family:'Bebas Neue',sans-serif; font-size:32px; color:var(--red); }
+.footer-logo .logo-text  { font-family:'Bebas Neue',sans-serif; font-size:24px; color:var(--text); letter-spacing:4px; }
+
+.footer-tagline {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  color: var(--text2);
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.footer-social { display: flex; gap: 10px; }
+.social-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg3); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; text-decoration: none; color: var(--text2);
+  transition: all 0.2s;
+}
+.social-btn:hover { background: var(--bg4); color: var(--text); border-color: var(--border2); }
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.footer-col h4 {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text); margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px; color: var(--text2);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text3);
+}
+
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .footer-inner { padding: 0 20px 40px; }
+  .footer-links-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+}

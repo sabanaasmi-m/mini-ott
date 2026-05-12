@@ -1,0 +1,82 @@
+.film-row { margin-bottom: 48px; }
+
+.film-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 48px;
+  margin-bottom: 18px;
+}
+
+.film-row-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.film-row-more {
+  font-size: 12px; font-weight: 600;
+  color: var(--text3); text-decoration: none;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  transition: color 0.2s;
+  display: flex; align-items: center; gap: 4px;
+}
+.film-row-more span { font-size: 16px; transition: transform 0.2s; }
+.film-row-more:hover { color: var(--text); }
+.film-row-more:hover span { transform: translateX(3px); }
+
+/* ── Scroll container ───────────────────────── */
+.film-row-wrap {
+  position: relative;
+}
+
+.film-row-scroll {
+  display: flex;
+  gap: 16px;
+  padding: 8px 48px 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.film-row-scroll::-webkit-scrollbar { display: none; }
+.film-row-scroll > * { scroll-snap-align: start; }
+
+/* ── Arrows ─────────────────────────────────── */
+.row-arrow {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  z-index: 10;
+  width: 40px; height: 80px;
+  border: none;
+  font-size: 28px; font-weight: 300;
+  color: var(--text);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+}
+.row-arrow.left  {
+  left: 0; border-radius: 0 8px 8px 0;
+  background: linear-gradient(to right, rgba(8,8,8,0.9), rgba(8,8,8,0.7));
+}
+.row-arrow.right {
+  right: 0; border-radius: 8px 0 0 8px;
+  background: linear-gradient(to left, rgba(8,8,8,0.9), rgba(8,8,8,0.7));
+}
+.film-row-wrap:hover .row-arrow { opacity: 1; }
+.row-arrow:hover { background: rgba(8,8,8,0.95); }
+
+/* ── Skeleton cards ─────────────────────────── */
+.film-card-skeleton { flex-shrink: 0; width: 180px; }
+.poster-skel { width: 100%; aspect-ratio: 2/3; border-radius: 10px; margin-bottom: 10px; }
+.title-skel  { width: 80%;  height: 13px; margin-bottom: 6px; }
+.sub-skel    { width: 50%;  height: 11px; }
+
+@media (max-width: 768px) {
+  .film-row-head { padding: 0 20px; }
+  .film-row-scroll { padding: 8px 20px 16px; gap: 12px; }
+  .row-arrow { display: none; }
+  .film-card { width: 140px; }
+}

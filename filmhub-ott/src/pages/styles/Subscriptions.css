@@ -1,0 +1,349 @@
+.subs-page {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: var(--bg);
+}
+
+/* ── Header ─────────────────────────────────── */
+.subs-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+.subs-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.subs-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.subs-subtitle {
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+/* ── Plans grid ─────────────────────────────── */
+.subs-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.plan-card-skel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.plan-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border2);
+}
+
+.plan-card.popular {
+  border-color: rgba(201, 168, 76, 0.4);
+  background: linear-gradient(160deg, #12100a 0%, var(--bg2) 100%);
+  box-shadow: 0 8px 48px rgba(201, 168, 76, 0.1);
+  transform: scale(1.03);
+}
+
+.plan-card.popular:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+.plan-card.free-plan {
+  border-color: var(--border);
+}
+
+.plan-popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #0a0804;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ── Plan header ────────────────────────────── */
+.plan-header {
+  margin-bottom: 28px;
+}
+
+.plan-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.price-free {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.price-currency {
+  font-size: 22px;
+  color: var(--text);
+  align-self: flex-start;
+  padding-top: 8px;
+}
+
+.price-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.price-period {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.plan-desc {
+  font-size: 13px;
+  color: var(--text3);
+  line-height: 1.5;
+}
+
+/* ── Features ───────────────────────────────── */
+.plan-features {
+  list-style: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text2);
+}
+
+.feat-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.plan-card.popular .feat-check {
+  background: var(--gold-dim);
+  color: var(--gold);
+}
+
+.plan-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+}
+
+/* ── FAQ ────────────────────────────────────── */
+.subs-faq {
+  padding-top: 20px;
+}
+
+.faq-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.faq-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.faq-item:hover {
+  border-color: var(--border2);
+}
+
+.faq-q {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.faq-a {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .subs-plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 60px;
+  }
+
+  .plan-card.popular {
+    transform: scale(1);
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .subs-page {
+    padding-top: 80px;
+  }
+
+  .subs-title {
+    font-size: 48px;
+  }
+}
+
+/* ── Active subscription banner ─────────────── */
+.active-sub-banner {
+  background: linear-gradient(135deg, #12100a, #0a0f08);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 16px 0;
+}
+
+.asb-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.asb-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.asb-inner strong {
+  display: block;
+  color: var(--gold);
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.asb-inner p {
+  font-size: 13px;
+  color: var(--text2);
+  margin: 0;
+}
+
+/* ── Trust badges ───────────────────────────── */
+.trust-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text2);
+  padding: 8px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+/* ── Current plan badge ─────────────────────── */
+.plan-current-badge {
+  position: absolute;
+  top: -12px;
+  right: 14px;
+  background: #22c55e;
+  color: #0a0804;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* ── Razorpay secure note ───────────────────── */
+.plan-secure {
+  font-size: 11px;
+  color: var(--text3);
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}

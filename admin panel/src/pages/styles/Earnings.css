@@ -1,0 +1,42 @@
+.earnings-page { animation: fadeIn 0.3s; }
+
+.earnings-hero-card {
+  background: linear-gradient(135deg, rgba(245,166,35,0.15), rgba(232,146,15,0.08));
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: var(--radius-lg); padding: 24px;
+  position: relative; overflow: hidden;
+}
+.earnings-hero-card::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(245,166,35,0.2), transparent 70%);
+}
+.earnings-label { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.earnings-amount {
+  font-family: var(--font-head); font-size: 42px; font-weight: 800;
+  color: var(--accent); margin-bottom: 4px; line-height: 1;
+}
+.earnings-note { font-size: 12px; color: var(--text2); }
+
+.plans-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px;
+}
+.plan-card {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px;
+}
+.plan-name { font-family: var(--font-head); font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.plan-price { font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+.plan-price span { font-size: 13px; color: var(--text2); font-weight: 400; }
+.plan-desc { font-size: 12px; color: var(--text2); }
+
+.earnings-notice {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2);
+  border-radius: var(--radius); padding: 16px 18px; margin-top: 20px;
+  font-size: 13px; color: var(--text2);
+}
+.earnings-notice strong { display: block; color: var(--text); margin-bottom: 4px; font-size: 14px; }
+.earnings-notice p { margin: 0; line-height: 1.6; }
+.earnings-notice > span { font-size: 18px; flex-shrink: 0; margin-top: 1px; }

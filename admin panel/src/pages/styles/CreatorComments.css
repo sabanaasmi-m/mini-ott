@@ -1,0 +1,137 @@
+.comments-page {
+    animation: fadeIn 0.3s;
+}
+
+.comments-film-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.film-filter-btn {
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text2);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-body);
+    white-space: nowrap;
+}
+
+.film-filter-btn:hover {
+    background: var(--bg3);
+    color: var(--text);
+}
+
+.film-filter-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.comment-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    transition: border-color 0.2s;
+}
+
+.comment-card:hover {
+    border-color: var(--border2);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.commenter-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.commenter-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    color: #0a0a0f;
+}
+
+.commenter-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 2px;
+}
+
+.comment-film-label {
+    font-size: 12px;
+    color: var(--text2);
+    margin: 0;
+}
+
+.comment-meta-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.star-rating {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: var(--text3);
+}
+
+.comment-body {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.comment-likes {
+    font-size: 12px;
+    color: var(--text3);
+    margin-bottom: 14px;
+}
+
+.reply-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reply-input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+}

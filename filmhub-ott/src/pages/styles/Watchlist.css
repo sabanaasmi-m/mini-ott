@@ -1,0 +1,33 @@
+.watchlist-page { min-height: 100vh; padding-top: 100px; padding-bottom: 80px; }
+
+.watchlist-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 36px; flex-wrap: wrap; gap: 16px;
+}
+.watchlist-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px; letter-spacing: 0.04em; color: var(--text); margin: 0 0 4px;
+}
+.watchlist-subtitle { font-size: 14px; color: var(--text3); margin: 0; }
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.watchlist-item { display: flex; flex-direction: column; gap: 8px; }
+.watchlist-item .film-card { width: 100%; }
+
+.remove-btn {
+  background: none; border: 1px solid rgba(232,0,29,0.2);
+  color: var(--text3); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 5px 0; border-radius: 6px; width: 100%;
+  transition: all 0.2s;
+}
+.remove-btn:hover { border-color: var(--red); color: var(--red); background: var(--red-dim); }
+
+@media (max-width: 600px) {
+  .watchlist-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; }
+}

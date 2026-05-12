@@ -1,0 +1,56 @@
+/* ── Role selector additions to Auth.css ── */
+/* Add these styles to filmhub-ott/src/pages/styles/Auth.css */
+
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.role-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: var(--bg3);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+.role-option:hover {
+  border-color: var(--border2);
+  background: var(--bg4);
+}
+
+.role-option.active {
+  border-color: var(--red);
+  background: var(--red-dim);
+}
+
+.role-option.active.creator {
+  border-color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.role-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.role-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.role-desc {
+  font-size: 11px;
+  color: var(--text3);
+  line-height: 1.4;
+}

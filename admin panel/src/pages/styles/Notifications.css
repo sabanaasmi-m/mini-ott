@@ -1,0 +1,181 @@
+.notif-page {
+    animation: fadeIn 0.3s;
+}
+
+.notif-stats {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.notif-stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 24px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    font-size: 13px;
+}
+
+.notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notif-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 18px 18px 18px 16px;
+    transition: border-color 0.2s;
+}
+
+.notif-card:hover {
+    border-color: #3a3a3a;
+}
+
+.notif-type-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.notif-body {
+    flex: 1;
+}
+
+.notif-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.notif-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.notif-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.notif-type-tag,
+.notif-global-tag,
+.notif-user-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.notif-global-tag {
+    background: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+}
+
+.notif-user-tag {
+    background: rgba(107, 114, 128, 0.12);
+    color: #9ca3af;
+}
+
+.notif-message {
+    font-size: 13px;
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin: 0 0 8px;
+}
+
+.notif-date {
+    font-size: 11px;
+    color: #555;
+}
+
+.notif-del-btn {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Modal extras */
+.notif-modal {
+    max-width: 560px;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 600;
+}
+
+.audience-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.aud-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+    font-size: 13px;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.aud-btn input {
+    display: none;
+}
+
+.aud-btn.active {
+    background: rgba(229, 9, 20, 0.12);
+    border-color: #e50914;
+    color: #fff;
+}

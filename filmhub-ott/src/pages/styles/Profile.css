@@ -1,0 +1,82 @@
+.profile-page { min-height: 100vh; padding-top: 100px; padding-bottom: 80px; background: var(--bg); }
+.profile-inner { max-width: 960px; }
+
+/* ── Header ─────────────────────────────────── */
+.profile-header {
+  display: flex; align-items: center; gap: 24px;
+  padding: 32px; background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 20px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.profile-avatar-lg {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--red); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 36px;
+  flex-shrink: 0;
+}
+.profile-header-info { flex: 1; }
+.profile-username {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; letter-spacing: 0.04em; color: var(--text); margin: 0 0 4px;
+}
+.profile-email { font-size: 14px; color: var(--text3); margin: 0 0 10px; }
+.profile-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ── Layout ─────────────────────────────────── */
+.profile-layout { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: flex-start; }
+
+/* ── Tabs ───────────────────────────────────── */
+.profile-tabs {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 10px;
+  display: flex; flex-direction: column; gap: 2px;
+  position: sticky; top: 120px;
+}
+.profile-tab {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; color: var(--text2);
+  background: none; border: none; text-align: left;
+  text-decoration: none; transition: all 0.15s;
+}
+.profile-tab:hover { background: var(--bg3); color: var(--text); }
+.profile-tab.active { background: var(--red-dim); color: var(--text); border-left: 2px solid var(--red); }
+
+/* ── Cards ──────────────────────────────────── */
+.profile-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px;
+}
+.profile-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; letter-spacing: 0.04em; color: var(--text); margin-bottom: 28px;
+}
+.profile-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── Account info ───────────────────────────── */
+.account-info {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 24px;
+}
+.account-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+}
+.account-row:last-child { border-bottom: none; }
+.account-label { font-size: 12px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+.account-value { font-size: 14px; color: var(--text); font-weight: 500; font-family: monospace; }
+
+.upgrade-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: var(--gold-dim); border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 12px; padding: 18px 20px;
+}
+.upgrade-banner strong { display: block; color: var(--gold); font-size: 14px; margin-bottom: 4px; }
+.upgrade-banner p { font-size: 13px; color: var(--text2); margin: 0; }
+
+@media (max-width: 768px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .profile-tabs { flex-direction: row; flex-wrap: wrap; position: static; }
+  .profile-tab { flex: 1; justify-content: center; min-width: 80px; }
+  .profile-form-grid { grid-template-columns: 1fr; }
+}
