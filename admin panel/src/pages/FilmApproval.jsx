@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api/axios';
 import Swal from 'sweetalert2';
-import './styles/FilmApproval.css';
+import './styles/Filmapproval.css';
 
 // BUG FIX 5: Admin can preview the video before approving/rejecting
 const VideoPreviewModal = ({ film, onClose }) => {
